@@ -1,24 +1,5 @@
 version: "3"
 services:
-  metadata:
-    name: api
-    annotations:
-      dev.okteto.com/generate-host: "domain"
-  spec:
-    type: ClusterIP
-    ports:
-      - 7350:7350
-        protocol: TCP
-        targetPort: 7350
-      - 7349:7349
-        protocol: TCP
-        targetPort: 7349
-      - 7348:7348
-        protocol: TCP
-        targetPort: 7348
-      - 8080:8080
-        protocol: HTTPS
-        targetPort: 8080
   nakama:
     image: heroiclabs/nakama:3.12.0
     volumes: 
@@ -26,8 +7,12 @@ services:
     command: ['--config', '/nakama/config.yml']
     ports:
       - 8080:8080
+          protocol: HTTP
       - 7350:7350
+          protocol: TCP
       - 7349:7349
+          protocol: TCP
       - 7348:7348
+          protocol: TCP
     expose:
       - 8080:8080

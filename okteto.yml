@@ -1,10 +1,10 @@
 build:
-   nakama:
-    context: nakama
+   api:
+    context: api
 deploy:
    compose: ./docker-compose.yml
 dev:
-   nakama:
+   api:
     forward:
       - 80:80
       - 7350:7350

@@ -6,7 +6,7 @@ services:
       - './data/config.yml:/nakama/config.yml'
     command: ['--config', '/nakama/config.yml']
     ports:
-      - 8080:8080/http
+      - 8080:8080
       - 7350:7350/tcp
       - 7349:7349/tcp
       - 7348:7348/tcp

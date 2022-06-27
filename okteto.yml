@@ -3,10 +3,8 @@ build:
     context: api
 deploy:
    compose: ./docker-compose.yml
-dev:
-   api:
-    forward:
-      - 80:80
-      - 7350:7350
-    sync:
-      - .:/usr/src/app
+   endpoint: 
+      web:
+         - path: /
+         service: frontend
+         port: 80

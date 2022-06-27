@@ -7,16 +7,16 @@ services:
   spec:
     type: ClusterIP
     ports:
-      - port: 7350
+      - 7350:7350
         protocol: TCP
         targetPort: 7350
-      - port: 7349
+      - 7349:7349
         protocol: TCP
         targetPort: 7349
-      - port: 7348
+      - 7348:7348
         protocol: TCP
         targetPort: 7348
-      - port: 8080
+      - 8080:8080
         protocol: HTTPS
         targetPort: 8080
   nakama:

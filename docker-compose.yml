@@ -4,8 +4,8 @@ services:
     image: heroiclabs/nakama:3.12.0
     volumes: 
       - './data/config.yml:/nakama/config.yml'
-    entrypoint:
+    command:
       - "/bin/sh"
       - "-ecx"
       - >
-        ./nakama --config /nakama/config.yml
+        nakama --config /nakama/config.yml

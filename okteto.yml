@@ -2,8 +2,8 @@ build:
    api:
     context: api
 deploy:
-  - name: Deploy API
-    compose: ./docker-compose.yml
+   - name: Deploy API
+   compose: ./docker-compose.yml
 dev:
    api:
     command: ["nakama 'postgres://enderman2003:v2_3s5Hz_wq8ehZqyDyRNBfMjejFJSg9@db.bit.io:5432/enderman2003/firstgames' migrate up"]

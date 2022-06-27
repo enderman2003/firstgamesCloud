@@ -2,7 +2,7 @@ build:
    api:
     context: api
 deploy:
-   - name: Deploy API
+   name: Deploy API
    compose: ./docker-compose.yml
 dev:
    api:

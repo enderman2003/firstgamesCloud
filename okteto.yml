@@ -4,6 +4,6 @@ build:
 metadata:
   name: api
   annotations:
-    dev.okteto.com/generate-host: "domain"
+    dev.okteto.com/generate-host: "https://nakama-7350-enderman2003.cloud.okteto.net"
 deploy:
    compose: ./docker-compose.yml

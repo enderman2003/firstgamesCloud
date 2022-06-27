@@ -1,5 +1,9 @@
 build:
    api:
     context: api
+metadata:
+  name: api
+  annotations:
+    dev.okteto.com/generate-host: "domain"
 deploy:
    compose: ./docker-compose.yml

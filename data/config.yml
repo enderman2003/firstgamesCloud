@@ -1,10 +1,10 @@
 name: firstgames
 
 console:
- signing_key: "EJ234H57N"
+ signing_key: ${CONSOLE_SIGNING_KEY}
  port: 8080
- username: "firstgamesCloudAdmin"
- password: "ej234h57n"
+ username: ${CONSOLE_USER}
+ password: ${CONSOLE_PASS}
 
 runtime:
  http_key: "neocrust@982003"
@@ -18,7 +18,7 @@ database:
 
 socket:
  port: 7350
- server_key: "neocrust98"
+ server_key: ${SOCKET_SERVER_KEY}
  max_message_size_bytes: 4096 # bytes
  read_timeout_ms: 10000
  write_timeout_ms: 10000
@@ -29,6 +29,6 @@ socket:
  outgoing_queue_size: 16
 
 session:
- refresh_encryption_key: "ej234h57n"
- encryption_key: "Ej234h57n"
+ refresh_encryption_key: ${SESSION_REFRESH_KEY}
+ encryption_key: ${SESSION_ENCRYPTION_KEY}
  token_expiry_sec: 60

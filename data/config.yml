@@ -2,7 +2,7 @@ name: firstgames
 
 console:
  signing_key: "EJ234H57N"
- port: 7351
+ port: 8080
  username: "firstgamesCloudAdmin"
  password: "ej234h57n"
 

@@ -7,8 +7,8 @@ services:
     command: ['--config', '/nakama/config.yml']
     ports:
       - 8080:8080
-      - 7350:7350
-      - 7349:7349
-      - 7348:7348
+      - 8077:8077
+      - 77:77
+      - 80:80
     expose:
       - 8080:8080

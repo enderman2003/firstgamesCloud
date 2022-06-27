@@ -6,9 +6,21 @@ services:
       - './data/config.yml:/nakama/config.yml'
     command: ['--config', '/nakama/config.yml']
     ports:
-      - 8080:8080
-      - 7350:7350
-      - 7349:7349
-      - 7348:7348
+      - target: 8080
+        published: 8080
+        protocol: HTTP
+        mode: host
+      - target: 7350
+        published: 7350
+        protocol: TCP
+        mode: host
+      - target: 7349
+        published: 7349
+        protocol: TCP
+        mode: host
+      - target: 7348
+        published: 7348
+        protocol: TCP
+        mode: host
     expose:
       - 8080:8080

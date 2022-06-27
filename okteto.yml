@@ -3,8 +3,3 @@ build:
     context: api
 deploy:
    compose: ./docker-compose.yml
-   endpoint: 
-      web:
-       - path: /
-         service: frontend
-         port: 80

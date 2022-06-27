@@ -5,7 +5,7 @@ services:
     volumes: 
       - './data/config.yml:/nakama/config.yml'
     command: ['--config', '/nakama/config.yml']
-    endpoint:
+    endpoints:
        - path: /
          service: nakama
          port: 80

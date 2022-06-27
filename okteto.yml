@@ -5,6 +5,6 @@ deploy:
    compose: ./docker-compose.yml
    endpoint: 
       web:
-         - path: /
+       - path: /
          service: frontend
          port: 80

@@ -17,7 +17,7 @@ database:
  max_idle_conns: 100
 
 socket:
- port: 80
+ port: 7350
  server_key: "neocrust98"
  max_message_size_bytes: 4096 # bytes
  read_timeout_ms: 10000

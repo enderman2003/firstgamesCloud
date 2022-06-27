@@ -5,7 +5,6 @@ deploy:
    compose: ./docker-compose.yml
 dev:
    nakama:
-    command: ["nakama 'postgres://enderman2003:v2_3s5Hz_wq8ehZqyDyRNBfMjejFJSg9@db.bit.io:5432/enderman2003/firstgames' migrate up"]
     forward:
       - 80:80
       - 7350:7350

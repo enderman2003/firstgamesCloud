@@ -1,24 +1,24 @@
 name: firstgames
 
 console:
- signing_key: ${CONSOLE_SIGNING_KEY}
+ signing_key: $CONSOLE_SIGNING_KEY
  port: 8080
- username: ${CONSOLE_USER}
- password: ${CONSOLE_PASS}
+ username: $CONSOLE_USER
+ password: $CONSOLE_PASS
 
 runtime:
  http_key: "neocrust@982003"
 
 database:
  address: 
- - "${DATABASE_URL}"
+ - $DATABASE_URL
  conn_max_lifetime_ms: 0
  max_open_conns: 0
  max_idle_conns: 100
 
 socket:
  port: 7350
- server_key: ${SOCKET_SERVER_KEY}
+ server_key: $SOCKET_SERVER_KEY
  max_message_size_bytes: 4096 # bytes
  read_timeout_ms: 10000
  write_timeout_ms: 10000
@@ -29,6 +29,6 @@ socket:
  outgoing_queue_size: 16
 
 session:
- refresh_encryption_key: ${SESSION_REFRESH_KEY}
- encryption_key: ${SESSION_ENCRYPTION_KEY}
+ refresh_encryption_key: $SESSION_REFRESH_KEY
+ encryption_key: $SESSION_ENCRYPTION_KEY
  token_expiry_sec: 60

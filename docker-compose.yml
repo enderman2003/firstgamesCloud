@@ -5,4 +5,4 @@ services:
     image: heroiclabs/nakama:3.12.0
     volumes: 
       - './data/config.yml:/nakama/config.yml'
-    command: ['nakama', '--config', '/nakama/config.yml']
+    command: ['--config', '/nakama/config.yml']

@@ -5,3 +5,7 @@ services:
     volumes: 
       - './data/config.yml:/nakama/config.yml'
     command: ['--config', '/nakama/config.yml']
+  nginx:
+    image: nginx:latest
+    ports:
+      - 10.154.159.238:8080

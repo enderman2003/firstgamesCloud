@@ -5,13 +5,13 @@ metadata:
 spec:
   type: LoadBalancer
   ports: 
-    - name: http-8080
+    - name: http
       port: 80
-    - name: tcp-7350
+    - name: tcp
       port: 7350
-    - name: tcp-7349
+    - name: tcp
       port: 7349
-    - name: tcp-8077
+    - name: tcp
       port: 77
   selector:
     app: nakama

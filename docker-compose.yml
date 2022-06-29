@@ -5,8 +5,3 @@ services:
     volumes: 
       - './data/config.yml:/nakama/config.yml'
     command: ['--config', '/nakama/config.yml']
-    expose:
-      - 8080:8080
-      - 7350:7350
-      - 7349:7349
-      - 8077:8077

@@ -16,7 +16,7 @@ spec:
       - name: nakama
         image: okteto.dev/nakama:latest
         ports: 
-          - containerPort: 8080
-          - containerPort: 8077
+          - containerPort: 80
+          - containerPort: 77
           - containerPort: 7350
           - containerPort: 7349

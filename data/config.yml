@@ -1,6 +1,7 @@
 name: firstgames
 
 console:
+ address: nakama
  signing_key: "HDJW*@JSI"
  port: 8080
  username: "firstgamesAdmin"
@@ -17,6 +18,7 @@ database:
  max_idle_conns: 100
 
 socket:
+ address: nakama
  port: 7350
  server_key: "JBWFII&@^$$10290"
  max_message_size_bytes: 4096 # bytes

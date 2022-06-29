@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: enderman2003
+  name: nakama
 spec:
   selector:
     matchLabels:
@@ -10,10 +10,13 @@ spec:
   template:
     metadata:
       labels:
-        app: firstgamescloud
+        app: nakama
     spec:
       containers:
       - name: nakama
         image: okteto.dev/nakama:latest
         ports:
         - containerPort: 8080
+        - containerPort: 8077
+        - containerPort: 7350
+        - containerPort: 7349

@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN ["usermod", "-aG", "docker"]
+RUN ["usermod", "newgrp", "docker"]
 
 FROM docker:latest
 

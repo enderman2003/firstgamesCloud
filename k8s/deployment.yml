@@ -3,9 +3,6 @@ kind: Deployment
 metadata:
   name: nakama
 spec:
-  selector:
-    matchLabels:
-      app: nakama
   replicas: 1
   template:
     metadata:

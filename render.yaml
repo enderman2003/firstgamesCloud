@@ -1,4 +1,4 @@
 services:
   - type: web
     env: docker
-    startCommand: docker-compose -f ./docker-compose.yml up
+    dockerCommand: docker-compose -f ./docker-compose.yml up

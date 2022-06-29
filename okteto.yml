@@ -1,0 +1,8 @@
+build:
+  api:
+    context: api
+
+deploy:
+  - okteto build -t okteto.dev/nakama:latest
+  - kubectl apply -f k8s
+   

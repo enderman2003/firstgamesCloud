@@ -1,7 +1,6 @@
 name: firstgames
 
 console:
- address: "host.docker.internal"
  signing_key: "HDJW*@JSI"
  port: 80
  username: "firstgamesAdmin"
@@ -12,13 +11,12 @@ runtime:
 
 database:
  address: 
- - "postgres://enderman2003:v2_3sAZ2_r8nsWNasq5R7xEVzZAuTHQR@db.bit.io:5432/enderman2003/firstgames"
+ - "postgres://enderman2003:v2_3sAZ2_r8nsWNasq5R7xEVzZAuTHQR@db.bit.io/enderman2003/firstgames"
  conn_max_lifetime_ms: 0
  max_open_conns: 0
  max_idle_conns: 100
 
 socket:
- address: "host.docker.internal"
  port: 7350
  server_key: "JBWFII&@^$$10290"
  max_message_size_bytes: 4096 # bytes

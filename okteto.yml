@@ -2,6 +2,7 @@ build:
     nakama:
       image: okteto.dev/nakama:latest
       context: .
+      dockerfile: Dockerfile
 deploy:
   - kubectl apply -f k8s
    

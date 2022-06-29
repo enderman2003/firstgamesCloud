@@ -1,5 +1,4 @@
 services:
   - type: web
     env: docker
-    image: heroiclabs/nakama:latest
-    startCommand: nakama --config ./data/config
+    startCommand: docker-compose -f ./docker-compose.yml up

@@ -1,10 +1,10 @@
-FROM ubuntu
+FROM docker:latest
 
 RUN mkdir -p /nakama/data
 RUN touch /nakama/data/logfile.log
 
 ADD ./nakama /nakama/
 ADD ./data/config.yml /nakama/
+ADD ./docker-compose.yml /nakama/
 
-RUN ["chmod", "+x", "/nakama/nakama"]
-ENTRYPOINT ["/nakama/nakama", "--config", "/nakama/config.yml"]
+RUN ["docker-compose", "/nakama/docker-compose.yml", "up"]

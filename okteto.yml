@@ -1,5 +1,0 @@
-build:
-   api:
-    context: api
-deploy:
-   compose: ./docker-compose.yml

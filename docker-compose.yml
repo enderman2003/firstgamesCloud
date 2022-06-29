@@ -5,11 +5,6 @@ services:
     volumes: 
       - './data/config.yml:/nakama/config.yml'
     command: ['--config', '/nakama/config.yml']
-    ports:
-      - 8080:8080
-      - 7350:7350
-      - 7349:7349
-      - 8077:8077
     expose:
       - 8080:8080
       - 7350:7350

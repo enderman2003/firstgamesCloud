@@ -1,4 +1,4 @@
-FROM nakama:latest
+FROM heroiclabs/nakama:latest
 
 RUN mkdir -p /nakama/data
 RUN touch /nakama/data/logfile.log

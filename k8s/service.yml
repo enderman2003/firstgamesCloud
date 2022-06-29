@@ -10,4 +10,4 @@ spec:
       7349: 7349
       8077: 8077
   selector:
-    app: nakama
+    app: firstgamescloud

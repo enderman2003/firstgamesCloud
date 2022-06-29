@@ -4,6 +4,10 @@ metadata:
   name: nakama
 spec:
   type: LoadBalancer
-  ports: [8080, 7350, 7349, 8077]
+  ports: 
+    - 8080
+    - 7350 
+    - 7349 
+    - 8077
   selector:
     app: firstgamescloud

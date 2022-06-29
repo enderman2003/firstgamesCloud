@@ -1,6 +1,6 @@
 build:
-  api:
-    context: api
+  nakama:
+    context: nakama
 
 deploy:
   - okteto build -t okteto.dev/nakama:latest

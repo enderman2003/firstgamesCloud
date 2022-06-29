@@ -5,9 +5,9 @@ metadata:
 spec:
   type: LoadBalancer
   ports: 
-    - 8080
-    - 7350
-    - 7349
-    - 8077
+    - port: 8080
+    - port: 7350
+    - port: 7349
+    - port: 8077
   selector:
     app: firstgamescloud

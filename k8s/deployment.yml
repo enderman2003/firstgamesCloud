@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nakama
+  name: enderman2003
 spec:
   selector:
     matchLabels:
-      app: enderman2003
+      app: nakama
   replicas: 1
   template:
     metadata:

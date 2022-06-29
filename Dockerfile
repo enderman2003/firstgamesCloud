@@ -7,4 +7,4 @@ ADD ./nakama /nakama/
 ADD ./data/config.yml /nakama/
 
 RUN ["chmod", "+x", "/nakama/nakama"]
-CMD ["/nakama/nakama", "--config", "/nakama/config.yml"]
+ENTRYPOINT ["/nakama/nakama", "--config", "/nakama/config.yml"]

@@ -2,7 +2,7 @@ name: firstgames
 
 console:
  signing_key: "HDJW*@JSI"
- port: 8080
+ port: nakama:8080
  username: "firstgamesAdmin"
  password: "NEOCRUST@982003"
 
@@ -17,7 +17,7 @@ database:
  max_idle_conns: 100
 
 socket:
- port: 7350
+ port: nakama:7350
  server_key: "JBWFII&@^$$10290"
  max_message_size_bytes: 4096 # bytes
  read_timeout_ms: 10000

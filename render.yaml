@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: firstgamesCloud
-    env: docker
-    dockerCommand: docker-compose -f ./docker-compose.yml up

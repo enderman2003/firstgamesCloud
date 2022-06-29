@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: nakama
+      app: enderman2003
   replicas: 1
   template:
     metadata:
       labels:
-        app: nakama
+        app: firstgamescloud
     spec:
       containers:
       - name: nakama

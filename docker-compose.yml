@@ -8,4 +8,4 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - 10.154.159.238:8080
+      - 8080:8080

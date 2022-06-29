@@ -1,9 +1,5 @@
 FROM ubuntu:latest
 
-RUN ["newgrp", "docker"]
-
-FROM docker:latest
-
 RUN mkdir -p /nakama/data
 RUN touch /nakama/data/logfile.log
 

@@ -7,4 +7,5 @@ ADD ./nakama /nakama/
 ADD ./data/config.yml /nakama/
 ADD ./docker-compose.yml /nakama/
 
-CMD ["docker-compose", "-f", "/nakama/docker-compose.yml", "up"]
+RUN "dockerd"
+RUN ["docker-compose", "-f", "/nakama/docker-compose.yml", "up"]

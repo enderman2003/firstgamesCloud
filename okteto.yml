@@ -1,4 +1,6 @@
+hello-world:
+   image: okteto.dev/nakama:latest
+   context: .
 deploy:
-  - okteto build -t okteto.dev/nakama:latest
   - kubectl apply -f k8s
    

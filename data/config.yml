@@ -1,6 +1,7 @@
 name: firstgames
 
 console:
+ address: "firstgamesclou-prod-firstgames-7d9y7v.mo2.mogenius.io"
  signing_key: "HDJW*@JSI"
  port: 8080
  username: "firstgamesAdmin"
@@ -17,7 +18,8 @@ database:
  max_idle_conns: 100
 
 socket:
- port: 7350
+ address: "tcp-mo2.mogenius.io"
+ port: 20521
  server_key: "JBWFII&@^$$10290"
  max_message_size_bytes: 4096 # bytes
  read_timeout_ms: 10000

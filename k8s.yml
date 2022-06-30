@@ -12,7 +12,8 @@ spec:
   template:
     metadata:
       name: nakama
-      label: nakama
+      labels: 
+        - app: nakama
     spec:
       containers:
       - image: okteto.dev/nakama:latest

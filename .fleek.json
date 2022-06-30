@@ -1,0 +1,11 @@
+{
+ "build": {
+   "image": "ubuntu:latest",
+   "command": "./nakama --config ./data/config.yml",
+   "publicDir": "build",
+   "baseDir": "./",
+   "environment": {
+     "SOME_ENV": "Build finished!"
+   }
+ }
+}

@@ -1,10 +1,9 @@
+name: nakama
 deploy:
   - okteto build -t okteto.dev/nakama:latest
   - kubectl apply -f k8s
-dev:
-  nakama:
-    forward:
-      - 80:80
-      - 77:77
-      - 7350:7350
-      - 7349:7349
+forward:
+  - 80:80
+  - 77:77
+  - 7350:7350
+  - 7349:7349

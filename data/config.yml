@@ -11,7 +11,7 @@ runtime:
 
 database:
  address: 
- - "postgres://enderman2003:v2_3sAZ2_r8nsWNasq5R7xEVzZAuTHQR@db.bit.io/enderman2003/firstgames"
+ - "enderman2003:v2_3sAZ2_r8nsWNasq5R7xEVzZAuTHQR@db.bit.io/enderman2003/firstgames"
  conn_max_lifetime_ms: 0
  max_open_conns: 0
  max_idle_conns: 100

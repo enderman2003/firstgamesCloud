@@ -1,7 +1,7 @@
 {
  "build": {
    "image": "heroiclabs/nakama:latest",
-   "command": "nakama --config ./data/config.yml",
+   "command": "--config ./data/config.yml",
    "publicDir": "./",
    "baseDir": "./"
  }

@@ -2,7 +2,7 @@ name: firstgames
 
 console:
  signing_key: "HDJW*@JSI"
- port: 80
+ port: 8080
  username: "firstgamesAdmin"
  password: "NEOCRUST@982003"
 

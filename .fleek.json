@@ -1,11 +1,8 @@
 {
  "build": {
-   "image": "ubuntu:latest",
-   "command": "chmod +x ./nakama",
-   "publicDir": "build",
-   "baseDir": "./",
-   "environment": {
-     "SOME_ENV": "Build finished!"
-   }
+   "image": "heroiclabs/nakama:latest",
+   "command": "nakama --config ./data/config.yml",
+   "publicDir": "./",
+   "baseDir": "./"
  }
 }

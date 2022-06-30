@@ -1,4 +1,4 @@
 deploy:
   - okteto build -t okteto.dev/nakama:latest
   - kubectl apply -f k8s
-   
+  - kubectl port-forward service/nakama 80:80 7350:7350 7349:7349 77:77

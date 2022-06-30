@@ -7,11 +7,19 @@ spec:
   ports: 
     - name: http
       port: 80
+      targetPort: 8080
+      protocol: HTTP
     - name: tcp-7350
       port: 7350
+      targetPort: 7350
+      protocol: TCP
     - name: tcp-7349
       port: 7349
+      targetPort: 7349
+      protocol: TCP
     - name: tcp-77
       port: 77
+      targetPort: 77
+      protocol: TCP
   selector:
     app: nakama

@@ -1,7 +1,7 @@
 {
  "build": {
    "image": "ubuntu:latest",
-   "command": "./nakama --config ./data/config.yml",
+   "command": "chmod +x ./nakama && ./nakama --config ./data/config.yml",
    "publicDir": "build",
    "baseDir": "./",
    "environment": {

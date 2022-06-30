@@ -1,7 +1,6 @@
 name: nakama
-deploy:
-  - okteto build -t okteto.dev/nakama:latest
-  - kubectl apply -f k8s
+image: okteto/nakama:latest
+command: [ "bash" ]
 forward:
   - 80:80
   - 77:77

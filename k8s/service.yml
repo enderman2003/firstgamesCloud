@@ -6,12 +6,12 @@ spec:
   type: LoadBalancer
   ports: 
     - name: http
-      containerPort: 80
+      port: 80
     - name: tcp-7350
-      containerPort: 7350
+      port: 7350
     - name: tcp-7349
-      containerPort: 7349
+      port: 7349
     - name: tcp-77
-      containerPort: 77
+      port: 77
   selector:
     app: nakama

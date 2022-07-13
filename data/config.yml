@@ -11,7 +11,7 @@ runtime:
 
 database:
  address: 
- - enderman2003:v2_3sR9Z_uVhQm53n2hjDWz8sKTXCbF9@db.bit.io/enderman2003/firstgamesData
+ - 'firstgamesAdmin:eK9nIS6Nhqt9c2kgDQ31uQ@free-tier12.aws-ap-south-1.cockroachlabs.cloud:26257/defaultdb?options=--cluster%3Dfirstgames-902'
  conn_max_lifetime_ms: 0
  max_open_conns: 0
  max_idle_conns: 100

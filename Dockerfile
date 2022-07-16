@@ -1,7 +1,14 @@
 FROM ubuntu:latest
 
 RUN mkdir -p /nakama/data
-RUN openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes
+RUN wget http://www.openssl.org/source/openssl-1.0.0g.tar.gz && \
+    tar xzvf openssl-1.0.0g.tar.gz && \
+    cd openssl-1.0.0g && \
+    ./config && \
+    make && \
+    make test && \
+    sudo make install
+
 
 ADD ./data/config.yml /nakama/data/
 ADD ./nakama /nakama

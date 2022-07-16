@@ -1,6 +1,6 @@
 local nk = require("nakama")
 
-local HTTPS_PREFIX = "https://"
+local HTTPS_PREFIX = "http://"
 local SENDINBLUE_URL = "https://api.sendinblue.com/v3/smtp/email"
 
 local function verify_email(_, payload)

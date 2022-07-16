@@ -10,7 +10,8 @@ local function verify_email(_)
 	local url = string.format(SENDINBLUE_URL, HTTPS_PREFIX)
 
 	local user_id = query_result[1].id
-
+	local json_payload = nk.json_decode(payload)
+	local email = json_payload.email
 	
 
 	local content = {

@@ -12,7 +12,7 @@ local function verify_email(_, payload)
 	
 
 	local content = '{"to": [{"email": null}], "templateId": 1, "params": { "OTP": math.random(000000, 999999), } }'
-	local content["to"][0]["email"] = email
+	local content["to"].email = email
 	local method = "POST"
 	local headers = {
 		["Content-Type"] = "application/json",
@@ -38,7 +38,7 @@ local function verify_email(_, payload)
 		return nk.json_encode({
 			["success"] = true,
 			["response"] = nk.json_decode(body),
-      ["otp"] = content["params"]["OTP"]
+      			["otp"] = content["params"].OTP
 		})
 	end
 end

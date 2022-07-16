@@ -8,7 +8,7 @@ local function verify_email(_, payload)
 	local email = json_payload.email
 	
 
-	local content = '{"to": [{"email": % }], "templateId": 1, "params": { "OTP": math.random(000000, 999999), } }' .. email
+	local content = '{"sender": { "email":"noreply@firstgames.ga", "name": "noreply@firstgames" },"to": [{ "email": % }], "templateId": 1, "params": { "OTP": math.random(000000, 999999), } }' .. email
 	local method = "POST"
 	local headers = {
 		["Accept"] = "application/json",

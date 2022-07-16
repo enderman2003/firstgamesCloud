@@ -11,17 +11,7 @@ local function verify_email(_, payload)
 	local email = json_payload.email
 	
 
-	local content = {
-          	to: [
-			{  
-				email: email
-			}
-		],
-		templateId: 1,
-		params: { 
-			OTP: math.random(000000, 999999),
-		}
-	}
+	local content = '{"to": [{"email": email}], "templateId": 1, "params": { "OTP": math.random(000000, 999999), } }'
 	local method = "POST"
 	local headers = {
 		["Content-Type"] = "application/json",

@@ -1,6 +1,6 @@
 local nk = require("nakama")
 
-local url = "http://api.sendinblue.com/v3/smtp/email"
+local url = "https://api.sendinblue.com/v3/smtp/email"
 
 local function verify_email(_, payload)
 

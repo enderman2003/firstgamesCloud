@@ -16,7 +16,7 @@ local function verify_email(_, payload)
    		["api-key"] = "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",
 	}
 
-	local success, code, headers, body = pcall(nk.http_request, url, method, headers, content)
+	local success, code, headers, body = nk.http_request(url, method, headers, content)
 	if (not success) then
 		nk.logger_error(string.format("Failed %q", code))
 		return nk.json_encode({

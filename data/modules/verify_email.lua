@@ -12,7 +12,7 @@ local function verify_email(_, payload)
 	local method = "POST"
 	local headers = {
 		["Content-Type"] = "application/json",
-   		["api-key"] = "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",
+   		["api-key"] = "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",
 	}
 
 	local success, code, headers, body = pcall(nk.http_request, url, method, headers, content)

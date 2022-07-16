@@ -27,15 +27,15 @@ local function verify_email(context, payload)
 	
 
 	local content = {
-          "to: [
-		{  
-	       		email: email
-		}
-	        ],
-        	templateId: 1,
-		params: { 
- 			OTP: math.random(000000, 999999),
-		}"
+          	[[to: [
+			{  
+				email: email
+			}
+			],
+			templateId: 1,
+			params: { 
+				OTP: math.random(000000, 999999),
+		}]]
 	}
 	local method = "POST"
 	local headers = {

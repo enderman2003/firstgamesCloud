@@ -1,5 +1,5 @@
 name: firstgames
-data_dir: "./data"
+data_dir: "./nakama/data"
 
 console:
  signing_key: "*(^@@(iwhGHJ@2910"
@@ -9,7 +9,7 @@ console:
 
 runtime:
  http_key: "qgf$&@!(@)l"
- path: "./data/modules/"
+ path: "./nakama/data/modules/"
 
 database:
  address: 

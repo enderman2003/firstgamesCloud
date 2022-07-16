@@ -1,4 +1,5 @@
 name: firstgames
+data_dir: "./data"
 
 console:
  signing_key: "*(^@@(iwhGHJ@2910"
@@ -8,6 +9,7 @@ console:
 
 runtime:
  http_key: "qgf$&@!(@)l"
+ path: "./data/modules/"
 
 database:
  address: 

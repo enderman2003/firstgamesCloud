@@ -1,16 +1,13 @@
 local nk = require('nakama')
-nk.register_rpc("UpdateMetadata", func(_, payload) (string, error) {
-    
-    local userId = payload.json_decode().user_id
-    local data = payload.json_decode().data
-    if (userId == null) {
-        return "", errors.New("could not get user ID from context")
-    }
+local function update_metadata(context, payload)
+    local userId = nk.json_decode(payload).user_id
+    local data = nk.json_decode(payload).data
+    if (userId == null)
+        return "could not get user ID from context"
+    end
 
-    if err := nk.AccountUpdateId(_, userId, "", map[string]interface{}{data},
-    }, "", "", "", "", ""); err != nil {
-        return "", errors.New("could not update account")
-    }
+    local update = nk.AccountUpdateId(_, userId, data)
+    return "success"
+end
+nk.register_rpc(update_metadata, "update_metadata")
 
-    return "{}", nil
-})

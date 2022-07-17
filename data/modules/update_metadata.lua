@@ -1,5 +1,5 @@
 local nk = require('nakama')
-initializer.RegisterRpc("UpdateMetadata", func(_, payload) (string, error) {
+nk.register_rpc("UpdateMetadata", func(_, payload) (string, error) {
     
     userId, ok := payload.json_decode().user_id
     data := payload.jaon_decode().data

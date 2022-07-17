@@ -1,9 +1,9 @@
 local nk = require('nakama')
 nk.register_rpc("UpdateMetadata", func(_, payload) (string, error) {
     
-    userId, ok := payload.json_decode().user_id
+    userId := payload.json_decode().user_id
     data := payload.jaon_decode().data
-    if !ok {
+    if (userId == null) {
         return "", errors.New("could not get user ID from context")
     }
 

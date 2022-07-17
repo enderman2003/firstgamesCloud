@@ -6,7 +6,7 @@ local function update_metadata(context, payload)
         error("Data could not be updated")
     end
 
-    local update = nk.account_update_id(user_id, data, "", "", "", "", "", "")
+    local update = nk.account_update_id(user_id, data)
     return payload
 end
 nk.register_rpc(update_metadata, "update_metadata")

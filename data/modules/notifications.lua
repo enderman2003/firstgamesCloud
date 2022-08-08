@@ -11,5 +11,5 @@ local function send_notification(context, payload)
   let senderId = context.user_id
   let persistent = false
   nk.notificationSend(receiverId, subject, content, code, senderId, persistent)
-
+end
 nk.register_rpc(send_notification, "send_notification")

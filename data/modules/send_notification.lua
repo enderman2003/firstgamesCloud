@@ -4,12 +4,12 @@ local function send_notification(context, payload)
   if (context.user_id == nil) then
     error("Data could not be updated")
   end
-  let receiverId = data.recipient_id
-  let subject = data.subject
-  let content = data.content
-  let code = data.code
-  let senderId = context.user_id
-  let persistent = false
-  nk.notificationSend(receiverId, subject, content, code, senderId, persistent)
+  local receiverId = data.recipient_id
+  local subject = data.subject
+  local content = data.content
+  local code = data.code
+  local senderId = context.user_id
+  local persistent = false
+  nk.notification_send(receiverId, subject, content, code, senderId, persistent)
 end
 nk.register_rpc(send_notification, "send_notification")

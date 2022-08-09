@@ -6,25 +6,19 @@ local function send_notification(context, payload)
   end
   local new_notifications = {
     {
-      subject = data.subject,
-      content = data.content,
-      sender_id = data.sender_id,
+      sender_id = context.user_id,
       user_id = data.p2_id,
       code = data.code,
       persistent = true
-    }
+    },
     {
-      subject = data.subject,
-      content = data.content,
-      sender_id = data.sender_id,
+      sender_id = context.user_id,
       user_id = data.data.p3_id,
       code = data.code,
       persistent = true
-    }
+    },
     {
-      subject = data.subject,
-      content = data.content,
-      sender_id = data.sender_id,
+      sender_id = context.user_id,
       user_id = data.p4_id,
       code = data.code,
       persistent = true

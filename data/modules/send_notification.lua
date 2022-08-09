@@ -8,8 +8,8 @@ local function send_notification(context, payload)
   local subject = data.subject
   local content = data.content
   local code = data.code
-  local senderId = context.user_id
-  local persistent = false
+  local senderId = data.userId
+  local persistent = true
   nk.notification_send(receiverId, subject, content, code, senderId, persistent)
 end
 nk.register_rpc(send_notification, "send_notification")

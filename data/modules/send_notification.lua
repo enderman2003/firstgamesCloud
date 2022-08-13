@@ -38,7 +38,7 @@ local function send_notification_fr(context, payload)
   end
   local sender_id = context.user_id
   local content = {
-    message: "Friend request from" ..context.username
+    message: "Friend request from" . . context.username
   }
   local user_id = data.id
   local code = data.code

@@ -36,10 +36,10 @@ local function send_notification_fr(context, payload)
   if (context.user_id == nil) then
     error("Data could not be updated")
   end
-  local sender_id = context.user_id,
-  local content = data.content,
-  local user_id = data.id,
-  local code = data.code,
+  local sender_id = context.user_id
+  local content = data.content
+  local user_id = data.id
+  local code = data.code
   local persistent = true
 
   nk.notification_send(user_id, nil, content, code, persistent)

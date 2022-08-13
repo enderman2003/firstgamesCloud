@@ -131,7 +131,7 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
             local object_ids = {
                 {
                     collection = "player_data",
-		    key = "position_" .. decoded.nm
+		    key = "position_" .. decoded.nm,
                     user_id = message.sender.user_id
                 }
             }

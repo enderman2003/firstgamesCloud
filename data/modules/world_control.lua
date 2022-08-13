@@ -131,6 +131,7 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
             local object_ids = {
                 {
                     collection = "player_data",
+		    key = "position_self"
                     user_id = message.sender.user_id
                 }
             }

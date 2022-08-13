@@ -23,7 +23,7 @@ commands[OpCodes.update_position] = function(data, state)
     end
 end
 
-ommands[OpCodes.update_input] = function(data, state)
+commands[OpCodes.update_input] = function(data, state)
     local id = data.id
     local input = data.inp
     if state.inputs[id] ~= nil then
@@ -56,7 +56,7 @@ function world_control.match_init(_, _)
         jumps = {},
         names = {}
     }
-    local tickrate = 10
+    local tickrate = 60
     local label = "firstgamesWorld"
     return gamestate, tickrate, label
 end

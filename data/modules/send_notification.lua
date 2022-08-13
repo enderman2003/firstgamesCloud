@@ -42,7 +42,7 @@ local function send_notification_fr(context, payload)
   local code = data.code
   local persistent = true
 
-  nk.notification_send(user_id, nil, content, code, persistent)
+  nk.notification_send(user_id, nil, content, code, sender_id, persistent)
 end
 
 nk.register_rpc(send_notification, "send_notification")

@@ -25,9 +25,11 @@ end
 
 commands[OpCodes.update_input] = function(data, state)
     local id = data.id
-    local input = data.inp
+    local input_x = data.inp_x
+    local input_z = data.inp_z
     if state.inputs[id] ~= nil then
-        state.inputs[id].dir = input
+        state.inputs[id].dir_x = input_x
+	state.inputs[id].dir_z = input_z
     end
 end
 
@@ -79,7 +81,8 @@ function world_control.match_join(_, dispatcher, _, state, presences)
         }
 
         state.inputs[presence.user_id] = {
-            ["dir"] = 0,
+            ["dir_x"] = 0,
+	    ["dir_z"] = 0,
             ["jmp"] = 0
         }
         state.names[presence.user_id] = "User"
@@ -159,7 +162,8 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
 
             local data = {
                 ["pos"] = state.positions,
-                ["inp"] = state.inputs,
+                ["inp_x"] = state.inputs,
+		["inp_z"] = state.inputs,
                 ["nms"] = state.names
             }
 
@@ -174,7 +178,8 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
 
     local data = {
         ["pos"] = state.positions,
-        ["inp"] = state.inputs
+        ["inp_x"] = state.inputs,
+	["inp_z"] = state.inputs,
     }
     local encoded = nk.json_encode(data)
 

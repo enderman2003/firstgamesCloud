@@ -42,10 +42,6 @@ end
 -- Updates the character color in the game state once the player's picked a character
 commands[OpCodes.do_spawn] = function(data, state)
     local id = data.id
-    local color = data.col
-    if state.colors[id] ~= nil then
-        state.colors[id] = color
-    end
 end
 
 function world_control.match_init(_, _)

@@ -37,7 +37,9 @@ local function send_notification_fr(context, payload)
     error("Data could not be updated")
   end
   local sender_id = context.user_id
-  local content = data.content
+  local content = {
+    message: "Friend request from" .. context.username
+  }
   local user_id = data.id
   local code = data.code
   local persistent = true

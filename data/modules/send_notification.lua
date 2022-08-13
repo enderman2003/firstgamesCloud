@@ -38,7 +38,7 @@ local function send_notification_fr(context, payload)
   end
   local sender_id = context.user_id,
   local content = data.content,
-  local user_id = data.p2_id,
+  local user_id = data.id,
   local code = data.code,
   local persistent = true
 

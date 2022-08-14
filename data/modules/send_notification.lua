@@ -36,15 +36,26 @@ local function send_notification_fr(context, payload)
   if (context.user_id == nil) then
     error("Data could not be updated")
   end
-  local sender_id = context.user_id
-  local content = {
-    message = "Friend request from " .. context.username
-  }
-  local user_id = data.id
-  local code = data.code
-  local persistent = true
-
-  nk.notification_send(user_id, nil, content, code, sender_id, persistent)
+  if (data.code == 102) then
+    local sender_id = context.user_id
+    local content = {
+      message = "Friend request from " .. context.username
+    }
+    local user_id = data.id
+    local code = data.code
+    local persistent = true
+    nk.notification_send(user_id, nil, content, code, sender_id, persistent)
+  end
+  if (data.code == 103) then
+    local sender_id = context.user_id
+    local content = {
+      message = "Invitation from " .. context.username
+    }
+    local user_id = data.id
+    local code = data.code
+    local persistent = true
+    nk.notification_send(user_id, nil, content, code, sender_id, persistent)
+  end
 end
 
 nk.register_rpc(send_notification, "send_notification")

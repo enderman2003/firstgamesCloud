@@ -50,6 +50,7 @@ local function send_notification_fr(context, payload)
     local sender_id = context.user_id
     local content = {
       message = "Invitation from " .. context.username
+      match_id = data.match_id
     }
     local user_id = data.id
     local code = data.code

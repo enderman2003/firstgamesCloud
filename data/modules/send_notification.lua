@@ -49,7 +49,7 @@ local function send_notification_fr(context, payload)
   if (data.code == 103) then
     local sender_id = context.user_id
     local content = {
-      message = "Invitation from " .. context.username
+      message = "Invitation from " .. context.username,
       match_id = data.match_id
     }
     local user_id = data.id

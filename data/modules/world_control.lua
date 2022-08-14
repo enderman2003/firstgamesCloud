@@ -162,8 +162,7 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
 
             local data = {
                 ["pos"] = state.positions,
-                ["inp_x"] = state.inputs,
-		["inp_z"] = state.inputs,
+                ["inp"] = state.inputs,
                 ["nms"] = state.names
             }
 
@@ -178,8 +177,7 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
 
     local data = {
         ["pos"] = state.positions,
-        ["inp_x"] = state.inputs,
-	["inp_z"] = state.inputs,
+        ["inp"] = state.inputs,
     }
     local encoded = nk.json_encode(data)
 

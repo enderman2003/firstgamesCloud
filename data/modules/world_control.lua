@@ -2,7 +2,7 @@ local world_control = {}
 
 local nk = require("nakama")
 
-local SPAWN_POSITION = {-213.778, 28.911, -760.475}
+local SPAWN_POSITION = {-50.622101, 6.813234, -156.801941}
 local OpCodes = {
     update_position = 1,
     update_input = 2,

@@ -10,4 +10,4 @@ ADD ./data/modules/world_rpc.lua nakama/data/modules/world_rpc.lua
 ADD ./data/modules/send_notification.lua nakama/data/modules/send_notification.lua
 
 RUN chmod +x /nakama/nakama
-CMD /nakama/nakama migrate up --database.address "enderman2003:JFlOGwzSTp63@ep-orange-leaf-915078.eu-central-1.aws.neon.tech/neondb?sslmode=require"
+CMD /nakama/nakama migrate up --database.address "enderman2003:JFlOGwzSTp63@ep-orange-leaf-915078.eu-central-1.aws.neon.tech/neondb?options=project%firstgames&sslmode=require"

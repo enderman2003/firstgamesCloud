@@ -10,4 +10,4 @@ ADD ./data/modules/world_rpc.lua nakama/data/modules/world_rpc.lua
 ADD ./data/modules/send_notification.lua nakama/data/modules/send_notification.lua
 
 RUN chmod +x /nakama/nakama
-CMD /nakama/nakama --config ./data/config.yml
+CMD /nakama/nakama --config /nakama/data/config.yml

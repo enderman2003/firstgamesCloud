@@ -13,7 +13,7 @@ runtime:
 
 database:
  address: 
- - 'enderman2003:v2_3yvaW_UHxS2Zj56aDgQJ9QEjNbaEf@db.bit.io:5432/enderman2003/firstgamesCloud'
+ - 'enderman2003:JFlOGwzSTp63@ep-orange-leaf-915078.eu-central-1.aws.neon.tech/neondb'
  conn_max_lifetime_ms: 0
  max_open_conns: 0
  max_idle_conns: 100

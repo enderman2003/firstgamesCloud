@@ -8,9 +8,7 @@ local function create_user(context, payload)
             collection = "user_data", 
             key = userId, 
             user_id = userId, 
-            value = {
-                data=data
-            },
+            value = {data='key'},
             permission_read = 2, 
             permission_write = 1
     }

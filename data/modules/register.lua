@@ -9,7 +9,7 @@ local function create_user(context, payload)
             key = userId, 
             user_id = userId, 
             value = {
-                data=data.data
+                data=data
             },
             permission_read = 2, 
             permission_write = 1

@@ -34,8 +34,8 @@ local function create_user(context, payload)
                     },
                     weapon_inv={
                         Hands={
-                            level=data['data']['weapon_inv'].level,
-                            cp=data['data']['weapon_inv'].cp
+                            level=data['data']['weapon_inv']['Hands'].level,
+                            cp=data['data']['weapon_inv']['Hands'].cp
                         }
                     },
                     upgrade_inv={

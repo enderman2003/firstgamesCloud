@@ -9,7 +9,8 @@ local function create_user(context, payload)
             collection = userId, 
             key = "user_data", 
             user_id = userId, 
-            value = {data=data['data']}, 
+            value = {data=data['data']},
+            version = "*",
             permission_read = 2, 
             permission_write = 1 
         },
@@ -18,7 +19,6 @@ local function create_user(context, payload)
     nk.storage_write(new_objects)
     return payload
 end
-local nk = require("nakama")
 
 local function send_location(context, payload)
     local userId = context.user_id
@@ -29,7 +29,8 @@ local function send_location(context, payload)
             collection = userId, 
             key = "user_data", 
             user_id = userId, 
-            value = {location=data['data']}, 
+            value = {location=data['data']},
+            version = "*",
             permission_read = 1, 
             permission_write = 1 },
     }

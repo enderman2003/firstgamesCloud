@@ -1,4 +1,4 @@
-local nakama = require("nakama")
+local nk = require("nakama")
 
 local function location_update(context, payload)
     local userId = context.user_id

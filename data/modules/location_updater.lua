@@ -11,7 +11,7 @@ local function location_update(context, payload)
             user_id = userId, 
             value = {
                 location={
-                    lat=data['lat']
+                    lat=data['lat'],
                     lon=data['lon']
                 }
             }, 

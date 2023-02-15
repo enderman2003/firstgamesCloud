@@ -15,6 +15,7 @@ local function create_user(context, payload)
                     ability=data['data']['ability'],
                     cool_down=data['data']['cool_down'],
                     cp=data['data']['cp'],
+                    rank=data['data']['rank'],
                     curr_weapon=data['data']['curr_weapon'],
                     location={
                         lon=data['data']['lon'],

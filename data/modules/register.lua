@@ -2,7 +2,7 @@ local nk = require("nakama")
 
 local function create_user(context, payload)
     local userId = context.user_id
-    local data = nk.json_decode(payload)
+    local data = nk.json_encode(payload)
 
     local new_objects = {
        { 

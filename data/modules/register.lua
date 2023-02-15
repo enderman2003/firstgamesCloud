@@ -18,8 +18,8 @@ local function create_user(context, payload)
                     cp=data['data'].cp,
                     curr_weapon=data['data'].curr_weapon,
                     location= {
-                        lon=data['data']['location'].lon,
-                        lat=data['data']['location'].lat,
+                        lon=data['data'].lon,
+                        lat=data['data'].lat,
                         ip_addr=data['data']['location'].ip_addr,
                         country=data['data']['location'].country,
                         region=data['data']['location'].region,

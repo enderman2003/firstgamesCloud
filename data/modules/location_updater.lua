@@ -9,12 +9,7 @@ local function location_update(context, payload)
             collection = "user_data", 
             key = userId, 
             user_id = userId, 
-            value = {
-                location={
-                    lat=data['lat'],
-                    lon=data['lon']
-                }
-            }, 
+            value = {data=data['data']}, 
             permission_read = 1, 
             permission_write = 1 
         },

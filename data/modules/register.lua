@@ -5,7 +5,6 @@ local function create_user(context, payload)
     local data = nk.json_decode(payload)
 
     local new_objects = {
-       { 
             collection = "user_data", 
             key = userId, 
             user_id = userId, 

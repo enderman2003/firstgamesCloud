@@ -9,7 +9,7 @@ local function create_user(context, payload)
             collection = userId, 
             key = "user_data", 
             user_id = userId, 
-            value = {value=data['data']}, 
+            value = {data=data['data']}, 
             permission_read = 2, 
             permission_write = 1 
         },
@@ -29,7 +29,7 @@ local function send_location(context, payload)
             collection = userId, 
             key = "user_data", 
             user_id = userId, 
-            value = {value=data['data']}, 
+            value = {location=data['data']}, 
             permission_read = 1, 
             permission_write = 1 },
     }

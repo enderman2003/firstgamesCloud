@@ -21,4 +21,4 @@ local function create_user(context, payload)
     nk.storage_write(new_objects)
     return payload
 end
-nk.register_rpc(update_metadata, "create_user")
+nk.register_rpc(create_user, "create_user")

@@ -10,4 +10,4 @@ ADD ./data/modules/world_rpc.lua nakama/data/modules/world_rpc.lua
 ADD ./data/modules/send_notification.lua nakama/data/modules/send_notification.lua
 
 RUN chmod +x /nakama/nakama
-CMD /nakama/nakama --config /nakama/data/config.yml
+CMD /nakama/nakama migrate up --database.address 'postgresql://sahilraut21102003:REVEAL_PASSWORD@eclipsecloud-3888.6xw.cockroachlabs.cloud:26257/defaultdb?options=&sslmode=verify'

@@ -5,7 +5,14 @@ local function create_user(context, payload)
     local data = nk.json_decode(payload)
 
     local new_objects = {
-       { collection = userId, key = "user_data", user_id = userId, value = {value=data['data']}, version="*", permission_read = 1, permission_write = 1 },
+       { 
+            collection = userId, 
+            key = "user_data", 
+            user_id = userId, 
+            value = {value=data['data']}, 
+            permission_read = 2, 
+            permission_write = 1 
+        },
     }
 
     nk.storage_write(new_objects)
@@ -18,7 +25,13 @@ local function send_location(context, payload)
     local data = nk.json_decode(payload)
 
     local new_objects = {
-       { collection = userId, key = "user_data", user_id = userId, value = {value=data['data']}, version="*", permission_read = 1, permission_write = 1 },
+       { 
+            collection = userId, 
+            key = "user_data", 
+            user_id = userId, 
+            value = {value=data['data']}, 
+            permission_read = 1, 
+            permission_write = 1 },
     }
 
     nk.storage_write(new_objects)

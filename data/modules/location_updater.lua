@@ -6,8 +6,8 @@ local function location_update(context, payload)
 
     local new_objects = {
        { 
-            collection = userId, 
-            key = "user_data", 
+            collection = "user_data", 
+            key = userId, 
             user_id = userId, 
             value = {
                 location={
@@ -16,7 +16,8 @@ local function location_update(context, payload)
                 }
             }, 
             permission_read = 1, 
-            permission_write = 1 },
+            permission_write = 1 
+        },
     }
 
     nk.storage_write(new_objects)

@@ -1,3 +1,4 @@
+local nk = require("nakama")
 local function version_write(context, payload)
     local userId = context.user_id
     local data = nk.json_decode(payload)

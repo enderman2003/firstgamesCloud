@@ -6,7 +6,7 @@ local function update_wallet(context, payload)
         error("Data could not be updated")
     end
     local changeset = {
-        coins = data.coins
+        coins = -data.coins
     }
     local metadata = {
         game_result = "killed"

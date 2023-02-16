@@ -38,7 +38,7 @@ local function create_user(context, payload)
                         }
                     },
                     upgrade_inv={
-                        banadges=data['data']['upgrade_inv']['bandages'],
+                        bandages=data['data']['upgrade_inv']['bandages'],
                         punching_bag=data['data']['upgrade_inv']['punching_bag']
                     }
                 }

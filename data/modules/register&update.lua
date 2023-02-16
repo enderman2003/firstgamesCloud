@@ -63,8 +63,8 @@ local function location_update(context, payload)
             value = {
                 data={
                     realtime_location={
-                        lon=data['data']['lon'],
-                        lat=data['data']['lat']
+                        lon=data['data']['realtime_location']['lon'],
+                        lat=data['data']['realtime_location']['lat']
                     }
                 }
             },

@@ -8,7 +8,7 @@ local function version_write(context, payload)
             user_id = userId, 
             value = {
                 data={
-                    version = 0.0.1
+                    version = "0.0.1"
                 }
             },
             permission_read = 2, 

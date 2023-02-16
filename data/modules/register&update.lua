@@ -63,11 +63,7 @@ local function location_update(context, payload)
                 data={
                     realtime_location={
                         lon=data['data']['lon'],
-                        lat=data['data']['lat'],
-                        ip_addr=data['data']['location']['ip_addr'],
-                        country=data['data']['location']['country'],
-                        region=data['data']['location']['region'],
-                        city=data['data']['location']['city']
+                        lat=data['data']['lat']
                     }
                 }
             },

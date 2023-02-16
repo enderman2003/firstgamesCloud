@@ -18,8 +18,6 @@ local function create_user(context, payload)
                     rank=data['data']['rank'],
                     curr_weapon=data['data']['curr_weapon'],
                     location={
-                        lon=data['data']['lon'],
-                        lat=data['data']['lat'],
                         ip_addr=data['data']['location']['ip_addr'],
                         country=data['data']['location']['country'],
                         region=data['data']['location']['region'],
@@ -53,4 +51,33 @@ local function create_user(context, payload)
     return payload
 end
 
+local function location_update(context, payload)
+    local userId = context.user_id
+    local data = nk.json_decode(payload)
+    local new_objects = {
+        {
+            collection = "realtime_location", 
+            key = userId, 
+            user_id = userId, 
+            value = {
+                data={
+                    realtime_location={
+                        lon=data['data']['lon'],
+                        lat=data['data']['lat'],
+                        ip_addr=data['data']['location']['ip_addr'],
+                        country=data['data']['location']['country'],
+                        region=data['data']['location']['region'],
+                        city=data['data']['location']['city']
+                    }
+                }
+            },
+            permission_read = 2, 
+            permission_write = 1
+        }
+    }
+    nk.storage_write(new_objects)
+    return payload
+end
+
+nk.register_rpc(location_update, "location_update")
 nk.register_rpc(create_user, "create_user")

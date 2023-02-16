@@ -3,13 +3,14 @@ local nk = require("nakama")
 local function create_user(context, payload)
     local userId = context.user_id
     local data = nk.json_decode(payload)
-
+    local uname = context.username
     local new_objects = {
         {
             collection = "user_data", 
             key = userId, 
             user_id = userId, 
             value = {data={
+                    username=uname
                     kills=data['data']['kills'],
                     deaths=data['data']['deaths'],
                     ability=data['data']['ability'],

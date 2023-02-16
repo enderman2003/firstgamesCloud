@@ -10,7 +10,7 @@ local function create_user(context, payload)
             key = userId, 
             user_id = userId, 
             value = {data={
-                    username=uname
+                    username=uname,
                     kills=data['data']['kills'],
                     deaths=data['data']['deaths'],
                     ability=data['data']['ability'],

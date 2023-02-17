@@ -5,7 +5,7 @@ local function create_user(context, payload)
     local data = nk.json_decode(payload)    
     local uname = context.username
     
-    if (data['user_id'] != nil) then
+    if (data['user_id'] ~= nil) then
         local new_objects = {
             {
                 collection = "user_data", 

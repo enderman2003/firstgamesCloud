@@ -12,6 +12,8 @@ local function create_user(context, payload)
                 key = data['user_id'], 
                 user_id = data['user_id'], 
                 value = {data={
+                        username=uname,
+                        cus_id=data['data']['data']['cus_id'],
                         username=data['data']['data']['username'],
                         kills=data['data']['data']['kills'],
                         deaths=data['data']['data']['deaths'],
@@ -61,6 +63,7 @@ local function create_user(context, payload)
             user_id = userId, 
             value = {data={
                     username=uname,
+                    cus_id=data['data']['data']['cus_id'],
                     kills=data['data']['kills'],
                     deaths=data['data']['deaths'],
                     ability=data['data']['ability'],
@@ -126,5 +129,27 @@ local function location_update(context, payload)
     return payload
 end
 
+local function update_pay(context, payload)
+    local userId = context.user_id
+    local data = nk.json_decode(payload)
+    local new_objects = {
+        {
+            collection = "payments", 
+            key = userId, 
+            user_id = userId, 
+            value = {
+                data={
+                    pay_ids=data['data']
+                }
+            },
+            permission_read = 2, 
+            permission_write = 1
+        }
+    }
+    nk.storage_write(new_objects)
+    return payload
+end
+
+nk.register_rpc(update_pay, "update_pay")
 nk.register_rpc(location_update, "location_update")
 nk.register_rpc(create_user, "create_user")

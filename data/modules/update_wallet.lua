@@ -25,7 +25,7 @@ local function add_coins(context, payload)
         local metadata = {
             game_result = "killed"
         }
-        local update = nk.wallet_update(userId, changeset, metadata, true)
+        local update = nk.wallet_update(data['user_id'], changeset, metadata, true)
         return payload
     end
     local changeset = {

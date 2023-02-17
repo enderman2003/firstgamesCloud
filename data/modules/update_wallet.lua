@@ -18,7 +18,7 @@ end
 local function add_coins(context, payload)
     local userId = context.user_id
     local data = nk.json_decode(payload)
-    if (data['user_id'] != nil) then
+    if (data['user_id'] ~= nil) then
         local changeset = {
             coins = data.coins
         }

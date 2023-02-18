@@ -4,8 +4,8 @@ local function version_write(context, payload)
     local data = nk.json_decode(payload)
     local new_objects = {
         {
-            collection = "AppInfo", 
-            key = "version", 
+            collection = data['col'], 
+            key = userId, 
             user_id = userId, 
             value = {
                 data={

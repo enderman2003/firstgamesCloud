@@ -1,29 +1,13 @@
 local nakama = require("nakama")
 
--- Gets the array of names currently in circulation out of non-user-owned storage.
--- @return A table in the format {names = {}}, with names being an array of strings.
-local function _get_name_collection()
-    local object_ids = {
-        {
-            collection = "global_data",
-            key = "names"
-        }
-    }
+local function _get_first_world()
+    local matches = nakama.match_list()
+    local current_match = matches[1]
 
-    local objects = nakama.storage_read(object_ids)
-
-    local names
-    for _, object in pairs(objects) do
-        names = object.value
-        if names ~= nil then
-            break
-        end
-    end
-
-    if names ~= nil then
-        return names
+    if current_match == nil then
+        return nakama.match_create("world_control", {})
     else
-        return {["names"] = {}}
+        return current_match.match_id
     end
 end
 

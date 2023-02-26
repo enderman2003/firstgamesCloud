@@ -151,8 +151,6 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
                 }
             end
 
-            state.names[message.sender.user_id] = decoded.nm
-
             local data = {
                 ["pos"] = state.positions,
                 ["inp"] = state.inputs
@@ -162,9 +160,6 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
             dispatcher.broadcast_message(OpCodes.initial_state, encoded, {message.sender})
 
             dispatcher.broadcast_message(OpCodes.do_spawn, message.data)
-        elseif op_code == OpCodes.update_color then
-            dispatcher.broadcast_message(OpCodes.update_color, message.data)
-        end
     end
 
     local data = {

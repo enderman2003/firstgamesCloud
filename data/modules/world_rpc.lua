@@ -93,7 +93,7 @@ function world_control.match_leave(_, _, _, state, presences)
         local new_objects = {
             {
                 collection = "player_data",
-                key = "position_" .. message.sender.user_id,
+                key = "position_" .. presence.user_id,
                 user_id = presence.user_id,
                 value = state.positions[presence.user_id]
             }

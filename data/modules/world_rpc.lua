@@ -160,6 +160,7 @@ function world_control.match_loop(_, dispatcher, _, state, messages)
             dispatcher.broadcast_message(OpCodes.initial_state, encoded, {message.sender})
 
             dispatcher.broadcast_message(OpCodes.do_spawn, message.data)
+        end
     end
 
     local data = {

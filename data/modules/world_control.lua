@@ -46,7 +46,7 @@ function world_control.match_init(_, _)
         inputs = {},
         positions = {}
     }
-    local tickrate = 10
+    local tickrate = 30
     local label = "Battle world"
     return gamestate, tickrate, label
 end

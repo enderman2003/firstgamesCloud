@@ -2,7 +2,7 @@
 -- Module that controls the game world. The world's state is updated every `tickrate` in the
 -- `match_loop()` function.
 
-local world_control = {}
+local world_rpc = {}
 
 local nk = require("nakama")
 

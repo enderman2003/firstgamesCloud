@@ -38,11 +38,6 @@ commands[OpCodes.update_input] = function(data, state)
     end
 end
 
--- Updates the character color in the game state once the player's picked a character
-commands[OpCodes.do_spawn] = function(data, state)
-    local id = data.id
-end
-
 -- When the match is initialized. Creates empty tables in the game state that will be populated by
 -- clients.
 function world_control.match_init(_, _)

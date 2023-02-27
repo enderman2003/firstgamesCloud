@@ -6,7 +6,7 @@ local world_control = {}
 
 local nk = require("nakama")
 
-local SPAWN_POSITION = {0, 0, 0}
+local SPAWN_POSITION = {35.355, 66, 35.355}
 
 -- Custom operation codes. Nakama specific codes are <= 0.
 local OpCodes = {

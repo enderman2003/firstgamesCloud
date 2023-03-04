@@ -35,13 +35,7 @@ local function create_user(context, payload)
                             hours=data['data']['data']['ban_time']['hours'],
                             minutes=data['data']['data']['ban_time']['minutes']
                         },
-                        weapon_inv={
-                            {
-                                name=data['data']['data']['weapon_inv']['name'],
-                                level=data['data']['data']['weapon_inv']['level'],
-                                cp=data['data']['data']['weapon_inv']['cp']
-                            }
-                        },
+                        weapon_inv=data['data']['data']['weapon_inv'],
                         upgrade_inv={
                             bandages=data['data']['data']['upgrade_inv']['bandages'],
                             punching_bag=data['data']['data']['upgrade_inv']['punching_bag']
@@ -85,13 +79,7 @@ local function create_user(context, payload)
                         hours=data['data']['ban_time']['hours'],
                         minutes=data['data']['ban_time']['minutes']
                     },
-                    weapon_inv={
-                        {
-                            name=data['data']['weapon_inv']['name'],
-                            level=data['data']['weapon_inv']['level'],
-                            cp=data['data']['weapon_inv']['cp']
-                        }
-                    },
+                    weapon_inv=data['data']['weapon_inv'],
                     upgrade_inv={
                         bandages=data['data']['upgrade_inv']['bandages'],
                         punching_bag=data['data']['upgrade_inv']['punching_bag']

@@ -86,13 +86,11 @@ local function create_user(context, payload)
                         minutes=data['data']['ban_time']['minutes']
                     },
                     weapon_inv={
-                        weapon_inv={
-                            {
-                                name=data['data']['weapon_inv']['name'],
-                                level=data['data']['weapon_inv']['level'],
-                                cp=data['data']['weapon_inv']['cp']
-                            }
-                        },
+                        {
+                            name=data['data']['weapon_inv']['name'],
+                            level=data['data']['weapon_inv']['level'],
+                            cp=data['data']['weapon_inv']['cp']
+                        }
                     },
                     upgrade_inv={
                         bandages=data['data']['upgrade_inv']['bandages'],

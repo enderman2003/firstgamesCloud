@@ -7,7 +7,7 @@ local function send_notification(context, payload)
   local subject = "Locked in battle"
 
   local content = {
-    matched = true
+    matched_id = data.data.matched_id
   }
 
   local receiver_id = data.data.rem_id

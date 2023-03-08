@@ -7,12 +7,12 @@ local function send_notification(context, payload)
   local subject = "Locked in battle"
 
   local content = {
-    matched_id = data.data.matched_id
+    matched = true
   }
 
   local receiver_id = data.data.rem_id
   local sender_id = context.user_id
-  local code = 101
+  local code = 149
   local persistent = false
 
   nk.notification_send(receiver_id, subject, content, code, sender_id, persistent)

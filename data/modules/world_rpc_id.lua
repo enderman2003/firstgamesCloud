@@ -1,6 +1,6 @@
 local nakama = require("nakama")
 
-local function _get_first_world()
+local function send_to_battle()
     local matches = nakama.match_list()
     local current_match = matches[1]
 
@@ -11,8 +11,4 @@ local function _get_first_world()
     end
 end
 
-local function get_world_id(_, _)
-    return _get_first_world()
-end
-
-nakama.register_rpc(get_world_id, "get_world_id")
+nakama.register_rpc(send_to_battle, "send_to_battle")

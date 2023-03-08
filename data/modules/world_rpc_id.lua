@@ -1,6 +1,6 @@
 local nk = require("nakama")
 
-local function death()
+local function death(context, payload)
   local data = nk.json_decode(payload)
   if (context.user_id == nil) then
     error("Data could not be updated")
@@ -19,7 +19,7 @@ local function death()
   nk.notification_send(receiver_id, subject, content, code, sender_id, persistent)
 end
 
-local function eliminated()
+local function eliminated(context, payload)
   local data = nk.json_decode(payload)
   if (context.user_id == nil) then
     error("Data could not be updated")
